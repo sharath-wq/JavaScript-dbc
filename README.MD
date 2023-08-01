@@ -4,7 +4,7 @@
 
 12. &emsp; Write a JavaScript program to check whether a given number is perfect, abundant or deficient. Use alert box to display the output.
 
-13. &emsp; Write a JavaScript program to check wheter the given sides can form a triangle. If yes, find the type (isosceles, equilateral and scalene) and area of the triangle. Use prompt dialogue box to                 accept the sides.
+13. &emsp; Write a JavaScript program to check wheter the given sides can form a triangle. If yes, find the type (isosceles, equilateral and scalene) and area of the triangle. Use prompt dialogue box to                  accept the sides.
 
 14. &emsp; Write a JavaScript program to display the nth prime number. Value of n should be accepted from the user. Validate the value entered by the user: Only positive numbers except 0 are to be accepted.
 
@@ -16,7 +16,7 @@
 
 18. &emsp; Design a JavaScript program to display the multiplication table of a no accepted from the user.
 
-19. &emsp; Design a form that accept two integer provide 4 buttons for Add, Subtract, Multiply, Divide. Add JavaScript program to add, subtract, multiply and divide the given numbers when these buttons are               clicked. Use output elements to display the results.
+19. &emsp; Design a form that accept two integer provide 4 buttons for Add, Subtract, Multiply, Divide. Add JavaScript program to add, subtract, multiply and divide the given numbers when these buttons are                clicked. Use output elements to display the results.
 
 20. &emsp; Write a JavaScript program to create a table after accepting row and column numbers from the user. Contents of each cell shoudl be corresponding row-column numbers
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nth Prime Number</title>
+    </head>
+    <body>
+        <script>
+            // Function to check if a number is prime
+            function isPrime(number) {
+                if (number <= 1) return false;
+                if (number <= 3) return true;
+
+                for (let i = 2; i * i <= number; i++) {
+                    if (number % i === 0) return false;
+                }
+
+                return true;
+            }
+
+            // Get the value of n from the user using the prompt dialog
+            const n = parseInt(prompt("Enter a positive integer (greater than 0) to find the nth prime number:"));
+
+            // Validate the input
+            if (isNaN(n) || n <= 0) {
+                alert("Invalid input. Please enter a positive integer greater than 0.");
+            } else {
+                let primeCount = 0;
+                let nthPrimeNumber;
+
+                for (let currentNumber = 2; primeCount < n; currentNumber++) {
+                    if (isPrime(currentNumber)) {
+                        primeCount++;
+                        nthPrimeNumber = currentNumber;
+                    }
+                }
+
+                alert("The " + n + "th prime number is: " + nthPrimeNumber);
+            }
+        </script>
+    </body>
+</html>

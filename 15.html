@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Years with January 1st as Sunday</title>
+    </head>
+    <body>
+        <script>
+            function isSunday(year) {
+                // January 1st of a year falls on Sunday if the day of the week (0: Sunday, 1: Monday, ..., 6: Saturday)
+                // for January 1st of the year is 0.
+                const january1st = new Date(year, 0, 1);
+                return january1st.getDay() === 0;
+            }
+
+            // Get the range from the user using the prompt dialog
+            const startYear = parseInt(prompt("Enter the start year:"));
+            const endYear = parseInt(prompt("Enter the end year:"));
+
+            let yearsWithSunaday = [];
+
+            for (let year = startYear; year <= endYear; year++) {
+                if (isSunday(year)) {
+                    yearsWithSunaday.push(year);
+                }
+            }
+
+            if (yearsWithSunaday.length === 0) {
+                alert("There are no years between " + startYear + " and " + endYear + " where January 1st is a Sunday.");
+            } else {
+                alert(
+                    "The years between " +
+                        startYear +
+                        " and " +
+                        endYear +
+                        " where January 1st is a Sunday are: " +
+                        yearsWithSunaday.join(", ")
+                );
+            }
+        </script>
+    </body>
+</html>

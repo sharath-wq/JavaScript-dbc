@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        <script>
+            // Get the number from the user
+            const number = parseInt(prompt("Enter a number to display its multiplication table:"));
+
+            // Check if the user entered a valid number
+            if (isNaN(number)) {
+                alert("Invalid input. Please enter a valid number.");
+            }
+
+            // Display the multiplication table
+            document.write("<br>Multiplication Table for " + number);
+            for (let i = 1; i <= 10; i++) {
+                const result = number * i;
+                document.write("<br>" + number + " * " + i + " = " + result);
+            }
+        </script>
+    </body>
+</html>

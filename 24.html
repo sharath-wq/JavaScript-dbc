@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Progress Element Demo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 20px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            #progressBar {
+                width: 50%;
+                height: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            #progress {
+                width: 0%;
+                height: 100%;
+                background-color: #4caf50;
+                transition: 0.3s ease-in-out;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Progress Element Demo</h1>
+        <div id="progressBar">
+            <div id="progress"></div>
+        </div>
+        <br />
+        <button onclick="simulateProgress()">Start Progress</button>
+
+        <script>
+            // Function to simulate progress and update the progress bar
+            function simulateProgress() {
+                const progressBar = document.getElementById("progress");
+                let progressValue = 0;
+                const interval = setInterval(function () {
+                    progressValue += 5;
+                    progressBar.style.width = progressValue + "%";
+                    if (progressValue >= 100) {
+                        clearInterval(interval);
+                    }
+                }, 500);
+            }
+        </script>
+    </body>
+</html>

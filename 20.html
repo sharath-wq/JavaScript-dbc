@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Table</title>
+        <!-- Basic Styling  -->
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 50%;
+                margin: 20px auto;
+            }
+
+            th,
+            td {
+                border: 1px solid #ccc;
+                padding: 8px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Create Table</h1>
+        <script>
+            function createTable() {
+                // Get the number of rows and columns from the user
+                const rows = parseInt(prompt("Enter the number of rows:"));
+                const columns = parseInt(prompt("Enter the number of columns:"));
+
+                // Create the table
+                const table = document.createElement("table");
+                for (let i = 1; i <= rows; i++) {
+                    const row = table.insertRow();
+                    for (let j = 1; j <= columns; j++) {
+                        const cell = row.insertCell();
+                        cell.textContent = i + "-" + j;
+                    }
+                }
+
+                // Display the table on the page
+                document.body.appendChild(table);
+            }
+
+            // Call the function to create the table
+            createTable();
+        </script>
+    </body>
+</html>

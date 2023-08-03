@@ -24,7 +24,7 @@
 
 22. &emsp; Write a JavaScript program to create clock with timing event.
 
-23. &emsp; Write a JavaScript program for form validation for question numbers 2, 3, and 4 **(NOT COMPLETED)**
+23. &emsp; Write a JavaScript program for form validation for question numbers 2, 3, and 4
 
 24. &emsp; Design a webpage to demonstrate the use of **progress** HTML element.
 

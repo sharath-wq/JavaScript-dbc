@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Form Validation</title>
+    </head>
+    <body>
+        <div class="container">
+            <form id="myForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+                <span id="nameError" class="error"></span>
+                <br /><br />
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" />
+                <span id="emailError" class="error"></span>
+                <br /><br />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" />
+                <span id="passwordError" class="error"></span>
+                <br /><br />
+
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+        <script>
+            const form = document.getElementById("myForm");
+            const nameField = document.getElementById("name");
+            const emailField = document.getElementById("email");
+            const passwordField = document.getElementById("password");
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const passwordError = document.getElementById("passwordError");
+
+            form.addEventListener("submit", function (event) {
+                let valid = true;
+
+                const nameValue = nameField.value.trim();
+                if (nameValue === "") {
+                    nameError.textContent = "Name is required";
+                    valid = false;
+                } else if (nameValue.length < 3) {
+                    nameError.textContent = "Name must be at least 3 characters long";
+                    valid = false;
+                } else {
+                    nameError.textContent = "";
+                }
+
+                const emailValue = emailField.value.trim();
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                if (emailValue === "") {
+                    emailError.textContent = "Email is required";
+                    valid = false;
+                } else if (!emailRegex.test(emailValue)) {
+                    emailError.textContent = "Invalid email format";
+                    valid = false;
+                } else {
+                    emailError.textContent = "";
+                }
+
+                const passwordValue = passwordField.value.trim();
+                if (passwordValue === "") {
+                    passwordError.textContent = "Password is required";
+                    valid = false;
+                } else if (passwordValue.length < 6) {
+                    passwordError.textContent = "Password must be at least 6 characters long";
+                    valid = false;
+                } else {
+                    passwordError.textContent = "";
+                }
+
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+        </script>
+    </body>
+</html>

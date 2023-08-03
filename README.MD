@@ -10,7 +10,7 @@
 
 15. &emsp; Write a JavaScript program to find all years in which 1st January is Sunday between a given range (eg:- between 2010 and 2017).
 
-16. &emsp; Design a Webpage to illustrate image rollover. **(NOT COMPLETED)**
+16. &emsp; Design a Webpage to illustrate image rollover.
 
 17. &emsp; Design a JavaScript program to illustrate teh following events: onLoad, onClick, onBlur, onSubmit, onChange.
 

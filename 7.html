@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Array Sum Calculator</title>
+    </head>
+    <body>
+        <h1>Array Sum Calculator</h1>
+        <label for="limit">Enter the number of values:</label>
+        <input type="number" id="limit" min="1" />
+        <button id="inputButton">Enter Values</button>
+        <button id="calculateButton">Calculate Sum</button>
+        <script>
+            const array = [];
+
+            const limitInput = document.getElementById("limit");
+            const inputButton = document.getElementById("inputButton");
+            const calculateButton = document.getElementById("calculateButton");
+
+            inputButton.addEventListener("click", () => {
+                const limit = parseInt(limitInput.value);
+                if (isNaN(limit) || limit <= 0) {
+                    alert("Please enter a valid positive number.");
+                    return;
+                }
+
+                array.length = 0;
+
+                for (let i = 0; i < limit; i++) {
+                    const inputValue = prompt(`Enter value #${i + 1}:`);
+                    if (inputValue !== null && inputValue !== "") {
+                        array.push(parseFloat(inputValue));
+                    } else {
+                        alert("Please enter a valid value.");
+                        i--;
+                    }
+                }
+            });
+
+            calculateButton.addEventListener("click", () => {
+                let sum = 0;
+                for (const value of array) {
+                    sum += value;
+                }
+                alert(`Sum of array elements: ${sum}`);
+            });
+        </script>
+    </body>
+</html>

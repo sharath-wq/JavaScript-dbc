@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TextBox Styling</title>
+    </head>
+    <body>
+        <h1>TextBox Styling</h1>
+        <label for="textbox">Enter text:</label>
+        <input
+            type="text"
+            id="textbox"
+            class="styled-textbox"
+            onfocus="onTextboxFocus(this)"
+            onblur="onTextboxBlur(this)"
+        />
+        <script>
+            function onTextboxFocus(element) {
+                element.style.color = "white";
+                element.style.backgroundColor = "blue";
+            }
+
+            function onTextboxBlur(element) {
+                element.style.color = "black";
+                element.style.backgroundColor = "white";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Country Capital Display</title>
+    </head>
+    <body>
+        <h1>Country Capital Display</h1>
+        <label for="countrySelect">Select a country:</label>
+        <select id="countrySelect" onchange="onCountrySelectChange()">
+            <option value="">Select a country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+        </select>
+        <label for="capitalTextbox">Capital:</label>
+        <input type="text" id="capitalTextbox" readonly />
+        <script>
+            function onCountrySelectChange() {
+                const countrySelect = document.getElementById("countrySelect");
+                const capitalTextbox = document.getElementById("capitalTextbox");
+
+                const selectedCountry = countrySelect.value;
+                let capital = "";
+
+                switch (selectedCountry) {
+                    case "usa":
+                        capital = "Washington, D.C.";
+                        break;
+                    case "canada":
+                        capital = "Ottawa";
+                        break;
+                    case "uk":
+                        capital = "London";
+                        break;
+                    case "france":
+                        capital = "Paris";
+                        break;
+                    case "germany":
+                        capital = "Berlin";
+                        break;
+                    default:
+                        capital = "Select a country";
+                }
+
+                capitalTextbox.value = capital;
+            }
+        </script>
+    </body>
+</html>
